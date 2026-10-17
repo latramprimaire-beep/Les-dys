@@ -106,7 +106,7 @@
       border-radius: 0 8px 8px 0;
     }
 
-    .tips-box {
+    .video-section {
       background-color: #e8f5e9;
       border-left: 6px solid #2e7d32;
       padding: 1rem;
@@ -114,8 +114,28 @@
       border-radius: 0 8px 8px 0;
     }
 
-    .tips-box h2 {
+    .video-section h2 {
       color: #1b5e20;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* Ratio 16:9 */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      border-radius: 8px;
+      border: 2px solid var(--border-color);
+      margin-top: 1rem;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
     footer {
@@ -171,13 +191,18 @@
       </p>
     </section>
 
-    <section class="tips-box">
-      <h2>Comment bien utiliser ce site ensemble ? 🤝</h2>
-      <ul>
-        <li>Découvre chaque page à ton rythme pour comprendre tes camarades ou toi-même [À VÉRIFIER : validation rythme d'apprentissage].</li>
-        <li>Pose des questions à ton maître ou ta maîtresse si tu veux en savoir plus.</li>
-        <li>N'oublie pas : nous avons tous des forces super fantastiques !</li>
-      </ul>
+    <section class="video-section">
+      <h2>À découvrir en musique : DYS, DYS, DYS... C'est pas grave ! 🎵</h2>
+      <p>Découvre cette vidéo musicale pour chanter et comprendre que chacun apprend à sa manière :</p>
+      
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/j3JXTtPyOXU" 
+          title="DYS, DYS, DYS... C'est pas grave ! 🎵 (Chanson sur la Neurodiversité et les DYS)" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
     </section>
   </main>
 
