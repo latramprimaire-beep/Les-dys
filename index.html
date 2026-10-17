@@ -1,178 +1,189 @@
 <!DOCTYPE html>
-<style>
-  :root {
-    --primary: #1a365d;
-    --accent: #2b6cb0;
-    --bg-color: #f7fafc;
-    --card-bg: #ffffff;
-    --text-color: #2d3748;
-    --highlight: #edf2f7;
-    --focus-ring: #3182ce;
-  }
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    font-family: Arial, Verdana, sans-serif;
-    font-size: 1.15rem;
-    line-height: 1.7;
-    letter-spacing: 0.04em;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    margin: 0;
-    padding: 0;
-  }
-  header {
-    background-color: var(--primary);
-    color: white;
-    padding: 1.5rem 1rem;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 1.8rem;
-  }
-  nav {
-    background-color: var(--highlight);
-    border-bottom: 2px solid #cbd5e0;
-    padding: 0.5rem;
-  }
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-  }
-  nav a {
-    display: inline-block;
-    padding: 6px 12px;
-    background-color: white;
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-    border: 1px solid #cbd5e0;
-    font-size: 0.95rem;
-  }
-  nav a:hover, nav a:focus {
-    background-color: var(--accent);
-    color: white;
-    outline: 3px solid var(--focus-ring);
-  }
-  main {
-    max-width: 800px;
-    margin: 2rem auto;
-    background-color: var(--card-bg);
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  }
-  h2 {
-    color: var(--primary);
-    font-size: 1.5rem;
-    border-bottom: 3px solid #e2e8f0;
-    padding-bottom: 0.5rem;
-    margin-top: 0;
-  }
-  p {
-    margin-bottom: 1.2rem;
-  }
-  .story-box {
-    background-color: #ebf8ff;
-    border-left: 6px solid #3182ce;
-    padding: 1rem 1.5rem;
-    border-radius: 0 8px 8px 0;
-    margin: 1.5rem 0;
-  }
-  .tip-box {
-    background-color: #f0fff4;
-    border-left: 6px solid #38a169;
-    padding: 1rem 1.5rem;
-    border-radius: 0 8px 8px 0;
-    margin: 1.5rem 0;
-  }
-  .pagination {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid #e2e8f0;
-  }
-  .pagination a {
-    padding: 10px 16px;
-    background-color: var(--accent);
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-  }
-  .pagination a:hover {
-    background-color: var(--primary);
-  }
-  footer {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: #e2e8f0;
-    color: #4a5568;
-    margin-top: 3rem;
-    font-size: 0.95rem;
-  }
-</style>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Le Club des Supers Cerveaux - Accueil</title>
-  <!-- [STYLE CSS COMMUN] -->
-  <style>/* Insérer ici le style CSS commun fourni plus haut */</style>
+  <title>Bienvenue ! — Les Super Cerveaux</title>
+  <style>
+    /* Style global axé sur l'accessibilité (A11y) pour DYS */
+    :root {
+      --bg-color: #f7f9fc;
+      --text-color: #111111;
+      --primary-color: #005a9c;
+      --primary-hover: #003d6b;
+      --accent-bg: #eef5fc;
+      --border-color: #222222;
+      --font-family: "Comic Neue", "OpenDyslexic", "Arial", "Helvetica", sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font-family);
+      font-size: 1.25rem; /* ~20px pour un confort de lecture chez l'enfant */
+      line-height: 1.8;
+      letter-spacing: 0.03em;
+      word-spacing: 0.1em;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ffffff;
+      border-bottom: 4px solid var(--primary-color);
+      padding: 1rem;
+    }
+
+    .site-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--primary-color);
+      text-align: center;
+      margin: 0 0 1rem 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    nav a {
+      display: inline-block;
+      background-color: #ffffff;
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+      padding: 0.5rem 0.8rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    nav a:hover, nav a:focus {
+      background-color: var(--primary-color);
+      color: #ffffff;
+      outline: 3px solid #ffbf47;
+    }
+
+    nav a[aria-current="page"] {
+      background-color: var(--primary-color);
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: #ffffff;
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: var(--primary-color);
+      margin-top: 0;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      color: #222222;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.3rem;
+    }
+
+    .story-box {
+      background-color: var(--accent-bg);
+      border-left: 6px solid var(--primary-color);
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .tips-box {
+      background-color: #e8f5e9;
+      border-left: 6px solid #2e7d32;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .tips-box h2 {
+      color: #1b5e20;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #ffffff;
+      border-top: 2px solid #ddd;
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>🧠 Le Club des Supers Cerveaux</h1>
-    <p>Comprendre les différences pour mieux grandir ensemble</p>
+    <div class="site-title">✨ Les Super Cerveaux</div>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li><a href="dyslexie.html">Dyslexie</a></li>
+        <li><a href="dyscalculie.html">Dyscalculie</a></li>
+        <li><a href="dyspraxie.html">Dyspraxie</a></li>
+        <li><a href="dysphasie.html">Dysphasie</a></li>
+        <li><a href="dysorthographie.html">Dysorthographie</a></li>
+        <li><a href="dysgraphie.html">Dysgraphie</a></li>
+        <li><a href="tdah.html">TDAH</a></li>
+        <li><a href="professionnels.html">Les Alliés</a></li>
+        <li><a href="super-pouvoirs.html">Super-pouvoirs</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav aria-label="Navigation principale">
-    <ul>
-      <li><a href="index.html" aria-current="page">Accueil</a></li>
-      <li><a href="dyslexie.html">Dyslexie</a></li>
-      <li><a href="dyscalculie.html">Dyscalculie</a></li>
-      <li><a href="dyspraxie.html">Dyspraxie</a></li>
-      <li><a href="dysphasie.html">Dysphasie</a></li>
-      <li><a href="dysorthographie.html">Dysorthographie</a></li>
-      <li><a href="dysgraphie.html">Dysgraphie</a></li>
-      <li><a href="tdah.html">TDAH</a></li>
-      <li><a href="professionnels.html">Les Super-Aides</a></li>
-      <li><a href="conclusion.html">Conclusion</a></li>
-    </ul>
-  </nav>
-
   <main>
-    <h2>Bienvenue dans l'aventure des cerveaux magiques !</h2>
-    <p>Tu sais, chaque personne sur Terre a un cerveau unique. C'est un peu comme un super-ordinateur : il fonctionne à sa façon pour apprendre, jouer, lire ou compter.</p>
-    
-    <div class="story-box">
-      <strong>L'analogie du super-héros :</strong> 
-      <p>Imagine que ton cerveau possède plein de super-pouvoirs. Parfois, certains circuits clignotent un peu différemment. On appelle cela les <strong>troubles DYS</strong>. Ce n'est ni une maladie, ni de la paresse : c'est juste une autre manière de voir le monde !</p>
-    </div>
+    <h1>Bienvenue dans l'aventure des cerveaux extraordinaires !</h1>
 
-    <p>Dans ce petit site, nous allons découvrir ensemble comment fonctionnent ces particularités et comment s'entraider à l'école.</p>
+    <section class="story-box">
+      <h2>L'histoire : Le grand orchestre des idées 🎻🎷🥁</h2>
+      <p>
+        Imagine que ton cerveau est un grand orchestre. Dans cet orchestre, il y a des violons, des flûtes, des tambours et des pianos. 
+      </p>
+      <p>
+        Chez certaines personnes, la musique se joue très vite. Chez d'autres, certains instruments jouent une mélodie différente ou ont besoin de plus de temps pour s'accorder. Est-ce que la musique est moins belle ? Pas du tout ! Elle est juste originale et unique.
+      </p>
+    </section>
 
-    <div class="tip-box">
-      <strong>Astuce :</strong> Utilise le menu en haut pour explorer chaque page à ton rythme.
-    </div>
+    <section>
+      <h2>C'est quoi un trouble DYS ? 💡</h2>
+      <p>
+        Le mot "DYS" regroupe de petites difficultés naturelles du cerveau pour lire, écrire, compter, parler ou faire des gestes précis. 
+      </p>
+      <p>
+        Ce n'est pas une maladie, ce n'est pas contagieux et cela n'a rien à voir avec l'intelligence ! C'est simplement une manière différente de fonctionner.
+      </p>
+    </section>
 
-    <div class="pagination">
-      <span></span>
-      <a href="dyslexie.html">Découvrir la Dyslexie ➔</a>
-    </div>
+    <section class="tips-box">
+      <h2>Comment bien utiliser ce site ensemble ? 🤝</h2>
+      <ul>
+        <li>Découvre chaque page à ton rythme pour comprendre tes camarades ou toi-même [À VÉRIFIER : validation rythme d'apprentissage].</li>
+        <li>Pose des questions à ton maître ou ta maîtresse si tu veux en savoir plus.</li>
+        <li>N'oublie pas : nous avons tous des forces super fantastiques !</li>
+      </ul>
+    </section>
   </main>
 
   <footer>
-    <p>Le Club des Supers Cerveaux - Un espace bienveillant pour les enfants de 6 à 10 ans.</p>
+    <p>Site éducatif et accessible — Conçu pour l'apprentissage et l'entraide à l'école primaire.</p>
   </footer>
+
 </body>
 </html>
